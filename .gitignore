@@ -1,0 +1,21 @@
+# Entornos virtuales
+venv/
+ENV/
+env/
+.venv/
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+
+# Archivos de logs
+*.log
+
+# Configuración de editores/IDEs
+.vscode/
+.idea/
+*.swp
