@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
-# Detectar sistema operativo
+# Detectar sistema operativo con so
 so = platform.system()
 
 options = Options()
