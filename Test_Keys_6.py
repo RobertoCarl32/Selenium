@@ -5,6 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys 
 
 # Detectar sistema operativo con so
 so = platform.system()
@@ -31,18 +32,9 @@ driver.maximize_window()
 time.sleep(2)
 nom = driver.find_element(By.XPATH, "//input[@type='text' and @id='userName']")
 nom.send_keys("Rodrigo")
-time.sleep(1)
-driver.find_element(By.CSS_SELECTOR, "#userEmail").send_keys("rodrigo@gmail.com")
-time.sleep(1)
-driver.find_element(By.XPATH, "//*[@id='currentAddress']").send_keys("Direccion uno")
-time.sleep(1)
-driver.find_element(By.XPATH, "//*[@id='permanentAddress']").send_keys("Direccion dos")
-time.sleep(1)
+nom.send_keys(Keys.TAB + "rodrigo@gmail.com" + Keys.TAB + "Direccion uno" + Keys.TAB + "Direccion dos " + Keys.TAB + Keys.ENTER)
 
-driver.execute_script("window.scrollTo(0, 800)")
-time.sleep(2)
-
-driver.find_element(By.XPATH, "//*[@id='submit']").click()
+driver.execute_script("window.scrollTo(0, 500)")
 time.sleep(2)
 
 
